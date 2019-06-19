@@ -18,7 +18,6 @@
     		'9' => 'rato',
     	);
     	$result = array_unique($array);
-    	#echo '<pre>' ,var_dump($string_array), '</pre><br/><br/>';
     	print_r($array);
     	echo '<br/>';
     	print_r($result);

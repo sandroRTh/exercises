@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8" />
@@ -15,6 +14,8 @@
 		<hr/>
 		<?php
 
+		/* exercício temporariamente em pausa, já fiz um que converte numeros escritos por extenso para o respectivo digito
+		por enquento é possível converter do zero ao vinte, proximo passo é poder converter do zero até a casa dos trilhões*/
 		    $number,array(
 		    	'zero' => '0',
 		    	'um' => '1',
