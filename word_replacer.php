@@ -74,8 +74,6 @@
                 } else {
                     echo "Você não digitou nada";   
                 }
-                
-
             }
         }
         ?>
