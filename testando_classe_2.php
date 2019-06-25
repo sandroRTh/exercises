@@ -1,5 +1,4 @@
 <?php
-
 class Post
 {
 	private $titulo;
@@ -7,12 +6,10 @@ class Post
 	private $mensagem;
 	private $comentarios;
 	private $qtdComentarios;
-
 	public function getTitulo()	
 	{
 		return $this->titulo;
 	}
-
 	public function setTitulo($t)	
 	{
 		if (is_string($t)) 
@@ -20,21 +17,28 @@ class Post
 			$this->titulo = $t;
 		}
 	}
-
 	public function getComentarios()
 	{
 		return $this->comentarios;
 	}
-
-	public function setComentarios($c)
+	public function addComentarios($c)
 	{
 		$this->comentarios = $c;
+		$this->contarComentarios();
+		var_dump($this->comentarios);
 	}
-
+	public function getQuantidadeComentarios()
+	{
+		return $this->qtdComentarios;
+	}
+	private function contarComentarios()
+	{
+		$this->qtdComentarios = count($this->comentarios);
+	}
 	public function __construct($t, $c)
 	{
 		$this->setTitulo($t);
-		$this->setComentarios($c);
+		$this->addComentarios($c);
 	}
 }
 ?>
@@ -47,11 +51,9 @@ class Post
 		<input type="text" name="comentarios" size="60" placeholder='Digite várias palavras separadas por virgula e espaço ", "' >
 		<br/><br/>
 		<input type="submit" name="ENVIAR" />
-
 		<hr>
 	</form>
 </center>
-
 <?php
 if (isset($_POST['texto']) && !empty($_POST['texto'])) 
 {
@@ -61,12 +63,13 @@ if (isset($_POST['texto']) && !empty($_POST['texto']))
 		$coment = $_POST['comentarios'];
 		$comentarios = explode(", ", $coment);
 		$post = new Post($texto, $comentarios);
-
-
+		
+		echo "<br/>";
 		echo "Título digitado: ".$post->getTitulo();
 		echo "<br/>";
-		echo "Comentários: ".$post->getComentarios();
-	}
-	
+		echo "Comentários: ".implode($post->getComentarios($comentarios)[1]);
+		echo "<br/>";
+		echo "Quantidade de comentários: ".$post->getQuantidadeComentarios();
+	}	
 }
 ?>
