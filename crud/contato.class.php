@@ -1,10 +1,10 @@
 <?php
 /* CRUD
-   
-   CREATE
-   READ
-   UPDATE
-   DELETE
+*  
+*  CREATE
+*  READ
+*  UPDATE
+*  DELETE
 */
 
 class Contato
