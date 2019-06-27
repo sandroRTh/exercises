@@ -13,7 +13,7 @@ class Contato
 
 	public function __construct()
 	{
-		$this->pdo = new PDO("pgsql:host=localhost;port=5433;dbname=crud;user=postgres;password=qwe123");
+		$this->pdo = new PDO("pgsql:host=localhost;port=5432;dbname=test_db;user=postgres;password=qwe123");
 	}
 
 	// CREATE criando dados.

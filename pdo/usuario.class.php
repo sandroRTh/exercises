@@ -12,7 +12,7 @@ class Usuario
 	{
 		try
 		{
-			$this->pdo = new PDO("pgsql:host=localhost;port=5433;dbname=pdo;user=postgres;password=qwe123");
+			$this->pdo = new PDO("pgsql:host=localhost;port=5432;dbname=test_db;user=postgres;password=qwe123");
 		}
 
 		catch(PDOException $e)

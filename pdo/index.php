@@ -8,4 +8,5 @@ $usuario->delete();
 $usuario->setEmail('ciclanodali@outlook.com');
 $usuario->setSenha('abC246');
 $usuario->salvar();*/
+echo 'Just some random text.';
 ?>
